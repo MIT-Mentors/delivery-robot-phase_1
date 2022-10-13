@@ -70,7 +70,7 @@ Make sure you have configured git using the commands.
     ```
     Initialise git in the local repository by executing the following commands.
     ```
-    cd ~/<catkin_workspace_name>/src/autonomous-delivery-bot
+    cd ~/<catkin_workspace_name>/src/delivery_robot_phase_1
     ```
     ```
     git init
@@ -88,7 +88,7 @@ Make sure you have configured git using the commands.
 
 4.  Connect local repository to remote
     ```
-    git remote add origin https://github.com/MIT-Mentors/autonomous-delivery-bot.git
+    git remote add origin https://github.com/MIT-Mentors/delivery_robot_phase_1.git
     ```
     ```
     git pull origin main --allow-unrelated-histories
