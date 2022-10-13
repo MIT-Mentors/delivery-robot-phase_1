@@ -202,5 +202,26 @@ include_directories(
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()
 
+add_executable(main src/main.cpp)
+target_link_libraries(main ${catkin_LIBRARIES})
+
+find_library(WIRINGPI_LIBRARIES NAMES wiringPi)
+target_link_libraries(main ${WIRINGPI_LIBRARIES})
+
+add_executable(delivery src/delivery.cpp)
+target_link_libraries(delivery ${catkin_LIBRARIES})
+
+add_executable(motor_speed_control src/motor_speed_control.cpp)
+target_link_libraries(motor_speed_control ${catkin_LIBRARIES})
+
+target_link_libraries(motor_speed_control ${WIRINGPI_LIBRARIES})
+
+add_executable(encoder src/encoder.cpp)
+target_link_libraries(encoder ${catkin_LIBRARIES})
+
+find_library(WIRINGPI_LIBRARIES NAMES wiringPi)
+target_link_libraries(encoder ${WIRINGPI_LIBRARIES})
+
+
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
